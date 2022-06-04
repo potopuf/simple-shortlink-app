@@ -1,0 +1,28 @@
+<legend>Shortlink</legend>
+
+<%= form_with model: @shortlink do |form| %>
+  <fieldset disabled>
+    <div class="mb-3">
+      <%= form.label :title, class: 'form-label' %><br>
+      <%= form.text_field :title, class: 'form-control', value: sanitize(@shortlink.title) %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :destination, class: 'form-label' %><br>
+      <%= form.text_field :destination, class: 'form-control', value: sanitize(@shortlink.destination) %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :back_half, class: 'form-label' %><br>
+      <%= form.text_field :back_half, class: 'form-control', value: sanitize(@shortlink.back_half) %>
+    </div>
+  </fieldset>
+<% end %>
+
+<%= link_to 'Edit', edit_shortlink_path(@shortlink), class: 'btn btn-primary' %>
+<%= link_to "Delete",
+            shortlink_path(@shortlink),
+            class: 'btn btn-danger',
+            method: :delete,
+            data: {confirm: 'Are you sure?'} %>
+<%= link_to 'Back', shortlinks_path, class: 'btn btn-secondary' %>
