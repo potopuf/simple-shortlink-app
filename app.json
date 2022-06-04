@@ -1,0 +1,8 @@
+{
+  "name": "Simple Shortlink app",
+  "description": "Simple Shortlink app",
+  "image": "heroku/ruby",
+  "repository": "https://github.com/potopuf/simple-shortlink-app",
+  "keywords": ["ruby", "rails" ],
+  "addons": ["heroku-postgresql"]
+}
